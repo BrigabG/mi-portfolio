@@ -1,0 +1,146 @@
+/* Reseteo de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuración general */
+body {
+    background-color: #001f3f; /* Azul profundo para los costados */
+    color: white; /* Texto en blanco */
+    font-family: 'Roboto', sans-serif; /* Tipografía principal */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Centrar el contenido del portfolio */
+.container {
+    max-width: 800px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 20px;
+    background-color: #003366; /* Azul más claro para el fondo del contenido */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para darle profundidad */
+}
+
+/* Encabezados */
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif; /* Tipografía para encabezados */
+    color: white; /* Asegura que los encabezados también sean blancos */
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Resaltar frases importantes en amarillo */
+.highlight {
+    color: #FFDD00; /* Amarillo para resaltar */
+}
+
+/* Estilos para las líneas */
+hr {
+    border: none;
+    height: 1px;
+    background-color: #FFDD00; /* Línea amarilla */
+    margin: 20px 0;
+}
+
+/* Navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FFDD00; /* Cambia a amarillo al pasar el ratón */
+    text-decoration: underline; /* Subrayado en hover */
+}
+
+/* Estilos para enlaces */
+a {
+    color: #FFDD00; /* Amarillo para destacar los enlaces */
+    text-decoration: none; /* Elimina el subrayado por defecto */
+    transition: color 0.3s ease; /* Efecto suave al pasar el ratón */
+}
+
+a:hover {
+    color: #FFFFFF; /* Cambia a blanco al pasar el ratón */
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
+/* Animaciones suaves para el contenido */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilos para las cajas de proyectos */
+.project {
+    background-color: #004080; /* Azul más claro */
+    border: 2px solid #FFDD00; /* Borde amarillo para destacar */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle más profundidad */
+    padding: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover en las cajas de proyectos */
+.project:hover {
+    transform: translateY(-5px); /* Efecto de levantar la caja */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra más profunda */
+}
+
+/* Ajustes para las imágenes en los proyectos */
+.project img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Ajustes de footer */
+footer {
+    background-color: #001f3f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    margin-top: 50px;
+}
+
+/* Espacio extra en la sección de contacto */
+#contact {
+    margin-bottom: 100px;
+}
+
+/* Estilo responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+        max-width: 100%; /* Ocupar todo el ancho en pantallas pequeñas */
+    }
+
+    .project img {
+        width: 100%; /* Asegura que las imágenes se ajusten en móviles */
+    }
+}
