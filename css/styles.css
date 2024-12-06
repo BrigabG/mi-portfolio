@@ -5,7 +5,6 @@
     box-sizing: border-box;
 }
 
-/* General configuration */
 body {
     background-color: #F5F5DC; /* Light beige */
     color: #3B2F2F; /* Dark brown for text */
@@ -14,12 +13,44 @@ body {
     padding: 0;
 }
 
+
+/* Centered content */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #FAF0E6; /* Soft beige for sections */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif; /* Typography for headings */
+    color: #8B4513; /* Medium brown for headings */
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Highlight important phrases */
+.highlight {
+    color: #A0522D; /* Reddish brown for highlights */
+}
+
+/* Divider lines */
+hr {
+    border: none;
+    height: 1px;
+    background-color: #A0522D; /* Highlight line color */
+    margin: 20px 0;
+}
+
 /* Navigation */
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    background-color: #5D4037; /* Chocolate brown */
+    background-color: #5D4037; /* Chocolate brown for navigation background */
     padding: 10px 0;
 }
 
@@ -28,46 +59,89 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #3B2F2F; /* Dark brown for links */
+    color: white;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #A0522D; /* Highlighted brown */
+    color: #A0522D; /* Highlight hover color */
     text-decoration: underline;
 }
 
-/* Project styles */
+/* Links */
+a {
+    color: #A0522D;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #3B2F2F; /* Dark brown on hover */
+    text-decoration: underline;
+}
+
+/* Smooth animations for content */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Project boxes */
 .project {
-    background-color: #FAF0E6; /* Soft beige */
-    border: 2px solid #8B4513; /* Medium brown */
+    background-color: #FAF0E6; /* Soft beige for project background */
+    border: 2px solid #8B4513; /* Medium brown for borders */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hover effect on project boxes */
 .project:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
+/* Adjustments for project images */
 .project img {
     width: 100%;
     height: auto;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     border-radius: 5px;
 }
 
-/* Footer */
+/* Footer adjustments */
 footer {
-    background-color: #5D4037; /* Chocolate brown */
+    background-color: #5D4037; /* Chocolate brown for footer */
     color: white;
     text-align: center;
     padding: 20px;
     margin-top: 50px;
+}
+
+/* Extra spacing for contact section */
+#contact {
+    margin-bottom: 100px;
+}
+
+/* Responsive styling for small screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .project img {
+        width: 100%;
+    }
 }
